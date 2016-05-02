@@ -1,10 +1,9 @@
 /**
  * angular-permission-ui
  * Extension module of angular-permission for access control within ui-router
- * @version v3.0.0 - 2016-04-30
+ * @version v3.0.0 - 2016-05-02
  * @link https://github.com/Narzerus/angular-permission
- * @author Rafael Vidaurre <narzerus@gmail.com> (http://www.rafaelvidaurre.com), Blazej Krysiak
- *   <blazej.krysiak@gmail.com>
+ * @author Rafael Vidaurre <narzerus@gmail.com> (http://www.rafaelvidaurre.com), Blazej Krysiak <blazej.krysiak@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 
@@ -118,7 +117,7 @@
         TransitionEvents.broadcastPermissionAcceptedEvent();
 
         // Overwrite notify option to broadcast it later
-        var transitionOptions = angular.extend({}, TransitionProperties.options, {notify: false, location: 'replace'});
+        var transitionOptions = angular.extend({}, TransitionProperties.options, {notify: false, location: true});
 
         $state
           .go(TransitionProperties.toState.name, TransitionProperties.toParams, transitionOptions)
